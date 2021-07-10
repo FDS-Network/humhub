@@ -152,16 +152,20 @@ class MenuLink extends MenuEntry
      * @param bool $asString return the URL as string
      * @return array|string
      */
-    public function getUrl($asString = true,$pad = null)
+    public function getUrl($asString = true)
     {
-        if ($asString && !$pad) {
-            $str = Yii::$app->user->getIdentity()->email;
-            $strEndcode = base64_encode($str);
-            $trimEndcode =  str_replace('=','-',$strEndcode);
-            return $this->getLink()->getHref().'&uid='. $trimEndcode;
+        if ($asString) {
+            if (Yii::$app->user->getIdentity() != null) {
+                $email = Yii::$app->user->getIdentity()->email;
+                $emailEnCoded = str_replace('=', '-', base64_encode($email));
+                return $this->getLink()->getHref() . '&uid=' . $emailEnCoded;
+            }
+            return $this->getLink()->getHref();
         }
+
         return $this->url;
     }
+
 
     /**
      * @return bool
