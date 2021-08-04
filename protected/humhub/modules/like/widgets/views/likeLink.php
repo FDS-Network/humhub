@@ -17,7 +17,7 @@ humhub\modules\like\assets\LikeAsset::register($this);
         </a>
         <a href="#" data-action-click="like.toggleLike" data-action-url="<?= $unlikeUrl ?>" class="unlike likeAnchor<?= !$canLike ? ' disabled' : '' ?>" style="<?= ($currentUserLiked) ? '' : 'display:none'?>">
             <?= Yii::t('LikeModule.base', 'Unlike') ?>
-            <i class="fa fa-thumbs-o-down" style="<?= ($currentUserLiked) ? '' : 'display:inline-block'?>"></i>
+            <i class="fa fa-thumbs-o-up" style="<?= ($currentUserLiked) ? '' : 'display:inline-block'?>"></i>
         </a>
     <?php endif; ?>
 
