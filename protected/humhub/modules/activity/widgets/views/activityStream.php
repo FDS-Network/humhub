@@ -23,4 +23,16 @@ ActivityAsset::register($this);
     <?= Html::beginTag('div', $options) ?>
     <ul id="activityContents" class="media-list activities" data-stream-content></ul>
     <?= Html::endTag('div') ?>
+
+</div>
+
+<div class="panel panel-default panel-activities" id="panel-activities">
+    <?= PanelMenu::widget(['id' => 'panel-activities']) ?>
+    <div class="panel-heading">
+        <?= Yii::t('ActivityModule.base', '<strong>Latest</strong> news') ?>
+    </div>
+<!--    --><?//=  \yii\helpers\VarDumper::dump($options,10,true);die; ?>
+    <?= Html::beginTag('div', $options) ?>
+    <ul id="activityContents" class="media-list activities" data-stream-content></ul>
+    <?= Html::endTag('div') ?>
 </div>
