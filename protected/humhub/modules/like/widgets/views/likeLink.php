@@ -12,12 +12,12 @@ humhub\modules\like\assets\LikeAsset::register($this);
         <?= Html::a(Yii::t('LikeModule.base', 'Like'), Yii::$app->user->loginUrl, ['data-target' => '#globalModal']); ?>
     <?php else: ?>
         <a href="#" data-action-click="like.toggleLike" data-action-url="<?= $likeUrl ?>" class="like likeAnchor<?= !$canLike ? ' disabled' : '' ?>" style="<?= (!$currentUserLiked) ? '' : 'display:none'?>">
-            <?= Yii::t('LikeModule.base', 'Like') ?>
             <i class="fa fa-thumbs-o-up" style="<?= (!$currentUserLiked) ? '' : 'display:inline-block'?>"></i>
+            <?= Yii::t('LikeModule.base', 'Like') ?>
         </a>
         <a href="#" data-action-click="like.toggleLike" data-action-url="<?= $unlikeUrl ?>" class="unlike likeAnchor<?= !$canLike ? ' disabled' : '' ?>" style="<?= ($currentUserLiked) ? '' : 'display:none'?>">
-            <?= Yii::t('LikeModule.base', 'Unlike') ?>
             <i class="fa fa-thumbs-up" style="<?= ($currentUserLiked) ? '' : 'display:inline-block'?>"></i>
+            <?= Yii::t('LikeModule.base', 'Unlike') ?>
         </a>
     <?php endif; ?>
 
