@@ -45,8 +45,11 @@ class DashboardNewAction extends ActivityStreamAction
 
     public function beforeApplyFilters()
     {
-        $andreas = User::findOne(1);
-        $this->user = $andreas;
+        $andreas = User::findOne(12);
+        if($andreas)
+        {
+            $this->user = $andreas;
+        }
         parent::beforeApplyFilters();
     }
 }
