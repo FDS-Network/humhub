@@ -71,7 +71,7 @@ use yii\helpers\Html;
             <td colspan="2" height="10"></td>
         </tr>
         <tr>
-            <td colspan="2" style="word-wrap:break-word;padding-top:5px; padding-bottom:5px; font-size: 14px; line-height: 22px; font-family:Open Sans,Arial,Tahoma, Helvetica, sans-serif; color:<?= Yii::$app->view->theme->variable('text-color-main', '#777') ?>; font-weight:300; text-align:left; border-top: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;">
+            <td colspan="2" style="word-wrap:break-word;padding-top:5px; padding-bottom:5px; font-size: 14px; line-height: 22px; font-family:Open Sans,Arial,Tahoma, Helvetica, sans-serif; color:<?= Yii::$app->view->theme->variable('text-color-main', '#777') ?>; font-weight:300; text-align:left; border-top: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;">
 
                 <?= $content ?>
 

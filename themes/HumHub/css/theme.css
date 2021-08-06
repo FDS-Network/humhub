@@ -137,7 +137,7 @@ body {
     -webkit-hyphens: auto;
     hyphens: auto;
     padding-top: 130px;
-    background-color: #ededed;
+    background-color: #F6F8FA;
     color: #555;
     font-family: 'Open Sans', sans-serif
 }
@@ -638,7 +638,7 @@ span.likeLinkContainer .unlike.disabled {
 
 #topbar-second .nav>li>a#space-menu {
     padding-right: 13px;
-    border-right: 1px solid #ededed
+    border-right: 1px solid #F6F8FA
 }
 
 #topbar-second .nav>li>a#search-menu {
@@ -1589,7 +1589,7 @@ ul.tab-menu-settings li.active>a {
 .nav .open>a,
 .nav .open>a:hover,
 .nav .open>a:focus {
-    border-color: #ededed;
+    border-color: #F6F8FA;
     color: #000
 }
 
@@ -1923,7 +1923,7 @@ div.required.has-error>label:after {
 }
 
 .form-control {
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     box-shadow: none;
     min-height: 35px
 }
@@ -2074,7 +2074,7 @@ a.input-field-addon-sm {
 }
 
 .label-default {
-    background: #ededed;
+    background: #F6F8FA;
     color: #7a7a7a !important
 }
 
@@ -2591,7 +2591,7 @@ body.modal-open {
     height: 10px;
     margin-bottom: 15px;
     box-shadow: none;
-    background: #ededed;
+    background: #F6F8FA;
     border-radius: 10px
 }
 
@@ -2701,7 +2701,7 @@ table td a:hover {
 }
 
 .comment .post-file-list {
-    background-color: #ededed
+    background-color: #F6F8FA
 }
 
 .comment.guest-mode .media:last-child .wall-entry-controls {
@@ -2888,7 +2888,7 @@ div.nested-comments-root div.comment-container {
 
 .grid-view .filters input,
 .grid-view .filters select {
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     box-shadow: none;
     min-height: 35px;
     border-radius: 4px;
@@ -3430,7 +3430,7 @@ div.nested-comments-root div.comment-container {
 }
 
 .filter-root .filter-panel+.filter-panel {
-    border-left: 2px solid #ededed
+    border-left: 2px solid #F6F8FA
 }
 
 .stream-entry-loader {
@@ -4468,7 +4468,7 @@ ul.tour-list li.completed a {
 .alert-default {
     color: #000;
     background-color: #f7f7f7;
-    border-color: #ededed;
+    border-color: #F6F8FA;
     font-size: 13px
 }
 
@@ -4691,7 +4691,7 @@ img.bounceIn {
 .ProsemirrorEditor .ProseMirror-menu-active {
     background: #eee;
     border-radius: 4px;
-    border: 1px solid #ededed !important
+    border: 1px solid #F6F8FA !important
 }
 
 .ProsemirrorEditor .ProseMirror-menu-disabled {
@@ -5113,7 +5113,7 @@ img.bounceIn {
 }
 
 [data-emoji-category] .atwho-emoji-entry.cur {
-    background-color: #ededed !important
+    background-color: #F6F8FA !important
 }
 
 .emoji-nav {
@@ -5359,7 +5359,7 @@ img.bounceIn {
 
 .select2-container--humhub .select2-selection {
     background-color: #fff;
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     border-radius: 4px;
     color: #555;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5369,7 +5369,7 @@ img.bounceIn {
 
 .select2-container--humhub .select2-search--dropdown .select2-search__field {
     background-color: #fff;
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     border-radius: 4px;
     color: #555;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

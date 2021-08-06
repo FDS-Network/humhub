@@ -69,7 +69,7 @@ use humhub\widgets\PoweredBy;
                 }
 
                 html, body {
-                    background-color: #ededed;
+                    background-color: #F6F8FA;
                     margin: 0;
                     padding: 0;
                 }
@@ -427,19 +427,19 @@ use humhub\widgets\PoweredBy;
                     table[id="col-underline"] {
                         float: none !important;
                         width: 100% !important;
-                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;
+                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;
                     }
 
                     td[id="col-underline"] {
                         float: none !important;
                         width: 100% !important;
-                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;
+                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;
                     }
 
                     td[class="col-underline"] {
                         float: none !important;
                         width: 100% !important;
-                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;
+                        border-bottom: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;
                     }
 
                     td[class="text-center"] {
@@ -521,11 +521,11 @@ use humhub\widgets\PoweredBy;
             <?php $this->head() ?>
     </head>
 
-    <body style="font-size:12px; font-family: <?= Yii::$app->view->theme->variable('mail-font-family', DefaultMailStyle::DEFAULT_FONT_FAMILY) ?>; background-color: <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;">
+    <body style="font-size:12px; font-family: <?= Yii::$app->view->theme->variable('mail-font-family', DefaultMailStyle::DEFAULT_FONT_FAMILY) ?>; background-color: <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;">
         <?php $this->beginBody() ?>
 
         <!--start 100% wrapper (white background) -->
-        <table width="100%" id="mainStructure" border="0" cellspacing="0" cellpadding="0" style="background-color:<?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;">
+        <table width="100%" id="mainStructure" border="0" cellspacing="0" cellpadding="0" style="background-color:<?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;">
 
 
             <!-- START VIEW HEADER -->
@@ -711,7 +711,7 @@ use humhub\widgets\PoweredBy;
                                                                 </td>
                                                             </tr>
                                                             <!-- end space -->
-                                                           
+
                                                         </table>
 
                                                     </td>
