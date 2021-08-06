@@ -10,6 +10,7 @@ namespace humhub\modules\dashboard\controllers;
 
 use humhub\components\behaviors\AccessControl;
 use humhub\components\Controller;
+use humhub\modules\dashboard\components\actions\DashboardNewAction;
 use humhub\modules\dashboard\components\actions\DashboardStreamAction;
 use humhub\modules\ui\view\components\View;
 use Yii;
@@ -61,7 +62,11 @@ class DashboardController extends Controller
             'activity-stream' => [
                 'class' => DashboardStreamAction::class,
                 'activity' => true
-            ]
+            ],
+            'new-stream' => [
+                'class' => DashboardNewAction::class,
+                'activity' => false
+            ],
 
         ];
     }
