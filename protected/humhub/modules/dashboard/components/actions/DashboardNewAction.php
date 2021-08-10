@@ -9,8 +9,10 @@
 namespace humhub\modules\dashboard\components\actions;
 
 use humhub\modules\content\widgets\stream\StreamEntryOptions;
+use humhub\modules\dashboard\Module;
 use humhub\modules\dashboard\stream\DashboardStreamQuery;
 use humhub\modules\activity\actions\ActivityStreamAction;
+use humhub\modules\space\models\Space;
 use humhub\modules\user\models\User;
 use Yii;
 use yii\helpers\VarDumper;
@@ -45,11 +47,7 @@ class DashboardNewAction extends ActivityStreamAction
 
     public function beforeApplyFilters()
     {
-        $andreas = User::findOne(12);
-        if($andreas)
-        {
-            $this->user = $andreas;
-        }
+        $this->getStreamQuery()->filterSpace(13);
         parent::beforeApplyFilters();
     }
 }

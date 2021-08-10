@@ -15,6 +15,7 @@ use humhub\modules\stream\models\filters\OriginatorStreamFilter;
 use humhub\modules\stream\models\filters\TopicStreamFilter;
 use humhub\modules\content\models\Content;
 use humhub\modules\user\models\User;
+use yii\helpers\VarDumper;
 
 /**
  * Description of StreamQuery
@@ -698,5 +699,9 @@ class StreamQuery extends Model
     public function isInitialQuery()
     {
         return $this->from === null && $this->to === null && !$this->isSingleContentQuery();
+    }
+
+    public function filterSpace($spaceId) {
+        $this->query()->andWhere('spaceContainer.id = :spaceId', [':spaceId' => $spaceId]);
     }
 }
