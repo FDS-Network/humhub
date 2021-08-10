@@ -47,7 +47,12 @@ class DashboardNewAction extends ActivityStreamAction
 
     public function beforeApplyFilters()
     {
-        $this->getStreamQuery()->filterSpace(13);
+        $user =  User::findOne(1);
+        if($user)
+        {
+            $this->getStreamQuery()->filterSpace(13);
+            $this->user = $user;
+        }
         parent::beforeApplyFilters();
     }
 }
