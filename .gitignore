@@ -27,6 +27,7 @@ nbproject
 
 themes/*
 !themes/HumHub
+!themes/HumHub1
 
 favicon.ico
 /.settings
