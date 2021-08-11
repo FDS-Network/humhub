@@ -31,7 +31,7 @@
         <td height="10"></td>
     </tr>
     <tr>
-        <td height="10" style="border-top: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#ededed') ?>;;"></td>
+        <td height="10" style="border-top: 1px solid <?= Yii::$app->view->theme->variable('background-color-page', '#F6F8FA') ?>;;"></td>
     </tr>
     <tr>
         <td>

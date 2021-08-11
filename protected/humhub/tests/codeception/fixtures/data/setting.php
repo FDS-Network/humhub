@@ -20,7 +20,7 @@ return [
     ['name' => 'installationId', 'value' => '99846c45e9b9b0962238986a6fed519a', 'module_id' => 'admin'],
     ['name' => 'theme', 'value' => 'HumHub', 'module_id' => 'base'],
     ['name' => 'tour', 'value' => '1', 'module_id' => 'base'],
-    ['name' => 'colorDefault', 'value' => '#ededed', 'module_id' => 'base'],
+    ['name' => 'colorDefault', 'value' => '#F6F8FA', 'module_id' => 'base'],
     ['name' => 'colorPrimary', 'value' => '#708fa0', 'module_id' => 'base'],
     ['name' => 'colorInfo', 'value' => '#6fdbe8', 'module_id' => 'base'],
     ['name' => 'colorSuccess', 'value' => '#97d271', 'module_id' => 'base'],

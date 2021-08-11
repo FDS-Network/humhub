@@ -802,7 +802,7 @@ span.likeLinkContainer .unlike.disabled {
 .modal .dropdown-menu li.selected,
 .panel .dropdown-menu li.selected,
 .nav-tabs .dropdown-menu li.selected {
-    border-left: 3px solid #F6AC17;
+    border-left: 3px solid #d4a975;
     background-color: #f7f7f7 !important
 }
 
@@ -3289,8 +3289,8 @@ div.nested-comments-root div.comment-container {
 }
 
 .wall-entry-controls a {
-    font-size: 11px;
     color: #F6AC17 !important;
+    font-size: 13px;
     margin-top: 10px;
     margin-bottom: 0
 }
@@ -3499,7 +3499,7 @@ div.nested-comments-root div.comment-container {
 
 #space-menu-dropdown .input-group-addon.focus {
     border-radius: 0 4px 4px 0;
-    border: 2px solid #F6AC17;
+    border: 2px solid #d4a975;
     border-left: 0
 }
 
@@ -3618,7 +3618,7 @@ ul.files li.file-preview-item .file-fileInfo {
 .post-file-list a:active,
 .post-file-list a:focus,
 .post-file-list a:hover {
-    color: #F6AC17;
+    color: #d4a975
 }
 
 #wallStream.mobile .post-files {
@@ -4382,7 +4382,7 @@ ul.tour-list li.completed a {
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-    border: 1px solid #F6AC17 !important;
+    border: 1px solid #d4a975 !important;
     background: #6fd6e4 !important
 }
 
@@ -4422,7 +4422,7 @@ ul.tour-list li.completed a {
 }
 
 .status-bar-content .showMore {
-    color: #F6AC17;
+    color: #d4a975;
     float: right;
     margin-left: 10px;
     font-size: .7em;
@@ -4454,7 +4454,7 @@ ul.tour-list li.completed a {
 
 .status-bar-content i.info,
 .status-bar-content i.debug {
-    color: #F6AC17;
+    color: #d4a975
 }
 
 .status-bar-content i.success {
@@ -4741,7 +4741,7 @@ img.bounceIn {
 }
 
 .ProsemirrorEditor.plainMenu .ProseMirror-menubar~.ProseMirror-focused {
-    border-color: #F6AC17 !important
+    border-color: #d4a975 !important
 }
 
 .ProsemirrorEditor.plainMenu .ProseMirror-textblock-dropdown {
@@ -5359,7 +5359,7 @@ img.bounceIn {
 
 .select2-container--humhub .select2-selection {
     background-color: #fff;
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     border-radius: 4px;
     color: #555;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5369,7 +5369,7 @@ img.bounceIn {
 
 .select2-container--humhub .select2-search--dropdown .select2-search__field {
     background-color: #fff;
-    border: 2px solid #ededed;
+    border: 2px solid #F6F8FA;
     border-radius: 4px;
     color: #555;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5939,7 +5939,7 @@ ul.tag_input li img {
 
 .userInput,
 .spaceInput {
-    background-color: #F6AC17;
+    background-color: #d4a975;
     font-weight: 600;
     color: #fff;
     border-radius: 3px;
