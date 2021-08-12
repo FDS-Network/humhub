@@ -13,6 +13,8 @@ use humhub\modules\dashboard\Module;
 use humhub\modules\dashboard\stream\DashboardStreamQuery;
 use humhub\modules\activity\actions\ActivityStreamAction;
 use humhub\modules\space\models\Space;
+use humhub\modules\ui\view\helpers\ThemeHelper;
+use humhub\modules\user\models\Profile;
 use humhub\modules\user\models\User;
 use Yii;
 use yii\helpers\VarDumper;
@@ -45,16 +47,31 @@ class DashboardNewAction extends ActivityStreamAction
         return parent::initStreamEntryOptions()->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD);
     }
 
-    public function beforeApplyFilters()
+    public function  querySpace()
     {
+        $profile = Profile::findOne(['user_id' => Yii::$app->user->getId()]);
+        $city = $profile['city'] ?? 0;
         $userFF = 12;
-        $spaceId = 13;
-        $user =  User::findOne($userFF);
-        if($user)
-        {
+        $user = User::findOne($userFF);
+        $this->conditionLoadNews($user,$city);
+    }
+    public function conditionLoadNews($user,$city){
+        if ($user && $city == 0) {
+            $spaceId = 13;
             $this->user = $user;
             $this->getStreamQuery()->filterSpace($spaceId);
         }
+        else
+        {
+            $spaceId = 16;
+            $this->user = $user;
+            $this->getStreamQuery()->filterSpace($spaceId);
+        }
+    }
+
+    public function beforeApplyFilters()
+    {
+        $this->querySpace();
         parent::beforeApplyFilters();
     }
 }
