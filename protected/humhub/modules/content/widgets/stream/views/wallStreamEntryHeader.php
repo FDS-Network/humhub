@@ -9,7 +9,7 @@ use humhub\modules\content\widgets\VisibilityIcon;
 use humhub\modules\content\widgets\WallEntryControls;
 use humhub\modules\space\models\Space;
 use humhub\modules\user\models\User;
-use humhub\modules\space\widgets\Image as SpaceImage;
+use humhub\modules\space\widgets\Image;
 use humhub\modules\ui\icon\widgets\Icon;
 use humhub\modules\ui\view\components\View;
 use humhub\widgets\TimeAgo;
@@ -69,6 +69,17 @@ $container = $model->content->container;
                 <?= Icon::get('caret-right') ?>
                 <?= Html::containerLink($model->content->container, ['class' => 'wall-entry-container-link']) ?>
             <?php elseif($model->content->container instanceof Space) : ?>
+                <?php if ($model->content->container->id === 13 || $model->content->container->id === 16) : ?>                    
+                    <?= Image::widget([
+                        'space' => $model->content->container,
+                        'width' => 17,
+                        'link' => true,
+                        'htmlOptions' => [
+                            'class' => 'current-space-image',
+                        ]
+                    ]);
+                    ?> 
+                <?php endif; ?>
                 <?= Html::containerLink($model->content->container, ['class' => 'wall-entry-container-link']) ?>
             <?php endif; ?>
         <?php endif; ?>
