@@ -56,12 +56,7 @@ class DashboardNewAction extends ActivityStreamAction
         $this->conditionLoadNews($user,$city);
     }
     public function conditionLoadNews($user,$city){
-        if ($user && $city == 0) {
-            $spaceId = 16;
-            $this->user = $user;
-            $this->getStreamQuery()->filterSpace($spaceId);
-        }
-        elseif ($user && $city == 1)
+        if ($user && $city == 1)
         {
             $spaceId = 13;
             $this->user = $user;
