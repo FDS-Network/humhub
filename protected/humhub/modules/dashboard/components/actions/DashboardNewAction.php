@@ -9,15 +9,12 @@
 namespace humhub\modules\dashboard\components\actions;
 
 use humhub\modules\content\widgets\stream\StreamEntryOptions;
-use humhub\modules\dashboard\Module;
+use humhub\modules\content\widgets\stream\WallStreamEntryOptions;
 use humhub\modules\dashboard\stream\DashboardStreamQuery;
 use humhub\modules\activity\actions\ActivityStreamAction;
-use humhub\modules\space\models\Space;
-use humhub\modules\ui\view\helpers\ThemeHelper;
 use humhub\modules\user\models\Profile;
 use humhub\modules\user\models\User;
 use Yii;
-use yii\helpers\VarDumper;
 
 /**
  * DashboardNewAction
@@ -38,33 +35,48 @@ class DashboardNewAction extends ActivityStreamAction
      * @inheritDoc
      */
     public $streamQueryClass = DashboardStreamQuery::class;
+    const USER_FRANK_FURT = 12;
+    const FUSS_BALL_SPACEID = 16;
+    const FRANK_FURT_SPACEID = 13;
+    const CITY_FRANK_FURT = 1;
 
     /**
      * @inheritDoc
      */
+
+//    public function initStreamEntryOptions()
+//    {
+//        $wallStreamEntry = new WallStreamEntryOptions();
+//        $wallStreamEntry->disableAddons();
+//        $wallStreamEntry->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD);
+//        return $wallStreamEntry;
+//    }
+
     public function initStreamEntryOptions()
     {
-        return parent::initStreamEntryOptions()->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD);
+        return parent::initStreamEntryOptions()
+            ->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD)
+            ->disableAddons();
     }
 
-    public function  querySpace()
+    public function querySpace()
     {
         $profile = Profile::findOne(['user_id' => Yii::$app->user->getId()]);
         $city = $profile['city'] ?? 0;
-        $userFF = 12;
-        $user = User::findOne($userFF);
-        $this->conditionLoadNews($user,$city);
+        $user = User::findOne(self::USER_FRANK_FURT);
+        $this->conditionLoadNews($user, $city);
     }
-    public function conditionLoadNews($user,$city){
-        if ($user && $city == 1)
-        {
-            $spaceId = 13;
+
+    public function conditionLoadNews($user, $city)
+    {
+        if ($user && $city == self::CITY_FRANK_FURT) {
+            // Eintracht Frankfurt Fans
+            $spaceId = self::FRANK_FURT_SPACEID;
             $this->user = $user;
             $this->getStreamQuery()->filterSpace($spaceId);
-        }
-        else
-        {
-            $spaceId = 16;
+        } else {
+            // fussball-news
+            $spaceId = self::FUSS_BALL_SPACEID;
             $this->user = $user;
             $this->getStreamQuery()->filterSpace($spaceId);
         }
