@@ -36,8 +36,8 @@ class DashboardNewAction extends ActivityStreamAction
      */
     public $streamQueryClass = DashboardStreamQuery::class;
     const USER_FRANK_FURT = 12;
-    const FUSS_BALL_SPACEID = 16;
     const FRANK_FURT_SPACEID = 13;
+    const FUSS_BALL_SPACEID = 16;
     const CITY_FRANK_FURT = 1;
 
     /**
