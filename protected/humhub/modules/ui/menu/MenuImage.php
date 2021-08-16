@@ -43,7 +43,7 @@ class MenuImage extends MenuEntry
 
     public function renderEntry($extraHtmlOptions = [])
     {
-        $imgUrl = Url::base(true) . '/uploads/logo_public/imagemega.png';
+        $imgUrl = Url::base(true) . '/uploads/logo_public/logoimagelink.png';
         $img = Html::img($imgUrl, $this->getHtmlOptions($extraHtmlOptions));
         if(Yii::$app->user->getIdentity() != null)
         {
