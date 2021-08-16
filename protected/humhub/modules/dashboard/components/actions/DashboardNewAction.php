@@ -56,7 +56,8 @@ class DashboardNewAction extends ActivityStreamAction
     {
         return parent::initStreamEntryOptions()
             ->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD)
-            ->disableAddons();
+            ->disableAddons()
+            ->disableControlsMenu();
     }
 
     public function querySpace()
