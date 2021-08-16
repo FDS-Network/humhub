@@ -13,6 +13,8 @@ use Yii;
 use humhub\modules\ui\menu\widgets\LeftNavigation;
 use humhub\modules\user\models\User;
 use humhub\modules\ui\menu\MenuImage;
+use yii\base\BaseObject;
+use yii\helpers\VarDumper;
 
 /**
  * ProfileMenuWidget shows the (usually left) navigation on user profiles.
@@ -44,9 +46,9 @@ class ProfileMenuRoom extends LeftNavigation
         $this->panelTitle = Yii::t('UserModule.profile', '<strong>Menu</strong> room');
 
         /** @var Module $module */
-        $module = Yii::$app->getModule('user');
-
-        $this->addEntry(new MenuImage([]));
+        $newImage = new MenuImage([]);
+        $newImage->setUser($this->user);
+        $this->addEntry($newImage);
 
         parent::init();
     }

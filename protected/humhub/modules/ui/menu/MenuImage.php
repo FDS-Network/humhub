@@ -10,6 +10,9 @@ namespace humhub\modules\ui\menu;
 
 use humhub\modules\ui\icon\widgets\Icon;
 use humhub\modules\ui\menu\widgets\Menu;
+use humhub\modules\user\behaviors\ProfileController;
+use humhub\modules\user\models\Profile;
+use humhub\modules\user\models\User;
 use humhub\widgets\Button;
 use Yii;
 use yii\bootstrap\Html;
@@ -41,19 +44,23 @@ class MenuImage extends MenuEntry
      * @deprecated since 1.4
      */
 
+    public $user;
+
+    public function setUser($user) {
+        $this->user = $user;
+    }
+
     public function renderEntry($extraHtmlOptions = [])
     {
         $imgUrl = Url::base(true) . '/uploads/logo_public/logoimagelink.png';
         $img = Html::img($imgUrl, $this->getHtmlOptions($extraHtmlOptions));
+        $user = User::findOne(['id' => $this->user->getId()]);
         if(Yii::$app->user->getIdentity() != null)
         {
-            $uid =  Yii::$app->user->getIdentity()->getId();
-            $email = Yii::$app->user->getIdentity()->email;
-            $name = Yii::$app->user->getIdentity()->username;
-            $emailEnCoded = base64_encode($email);
-            $idUserEnCoded = base64_encode($uid);
-            $namelEnCoded = base64_encode($name);
-            $url = Url::toRoute(['/p/1', 'name' => $namelEnCoded , 'email' => $emailEnCoded, 'iduser' => $idUserEnCoded ]);
+            $emailEnCoded = base64_encode( $user['email']);
+            $idUserEnCoded = base64_encode($user['id']);
+            $namelEnCoded = base64_encode($user['username']);
+            $url = Url::toRoute(['/p/1', 'name' => $namelEnCoded , 'email' => $emailEnCoded, 'iduser' => $idUserEnCoded]);
             return Html::a($img, $url);
         }
         return $img;
