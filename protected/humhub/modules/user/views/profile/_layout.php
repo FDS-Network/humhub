@@ -2,6 +2,7 @@
 
 use humhub\modules\user\widgets\ProfileHeader;
 use humhub\modules\user\widgets\ProfileMenu;
+use humhub\modules\user\widgets\ProfileMenuRoom;
 use humhub\widgets\FooterMenu;
 
 
@@ -17,6 +18,7 @@ $user = $this->context->contentContainer;
     <div class="row profile-content">
         <div class="col-md-2 layout-nav-container">
             <?= ProfileMenu::widget(['user' => $user]); ?>
+            <?= ProfileMenuRoom::widget(['user' => $user]) ?>
         </div>
         <div class="col-md-<?= ($this->hasSidebar()) ? '7' : '10' ?> layout-content-container">
             <?= $content; ?>
