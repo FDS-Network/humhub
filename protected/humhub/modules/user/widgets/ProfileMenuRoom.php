@@ -43,7 +43,7 @@ class ProfileMenuRoom extends LeftNavigation
     public function init()
     {
 
-        $this->panelTitle = Yii::t('UserModule.profile', '<strong>Menu</strong> room');
+        $this->panelTitle = Yii::t('UserModule.profile', '<strong>My</strong> room');
 
         /** @var Module $module */
         $newImage = new MenuImage([]);
