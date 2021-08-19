@@ -16,11 +16,11 @@ use humhub\modules\ui\view\components\View;
 
 <div class="panel panel-default wall_<?= $model->getUniqueId() ?>">
     <div class="panel-body">
-        <?php if (!$renderOptions->isAddonsDisabled()) : ?>
             <div class="media wall-entry-header">
-                <?= $header ?>
+                <?php if (!$renderOptions->isAddonsDisabled()) : ?>
+                    <?= $header ?>
+                <?php endif; ?>
             </div>
-        <?php endif; ?>
 
         <div class="wall-entry-body">
             <div class="wall-entry-topics">
