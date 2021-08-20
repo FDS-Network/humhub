@@ -29,6 +29,7 @@ class WallEntry extends WallStreamEntryWidget
         return $this->render('wallEntry', [
             'post' => $this->model,
             'justEdited' => $this->renderOptions->isJustEdited(), // compatibility for themed legacy views
+            'isNews' => $this->renderOptions->getNewsOption(),
             'renderOptions' => $this->renderOptions
         ]);
     }

@@ -44,21 +44,22 @@ class DashboardNewAction extends ActivityStreamAction
      * @inheritDoc
      */
 
-//    public function initStreamEntryOptions()
-//    {
-//        $wallStreamEntry = new WallStreamEntryOptions();
-//        $wallStreamEntry->disableAddons();
-//        $wallStreamEntry->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD);
-//        return $wallStreamEntry;
-//    }
-
     public function initStreamEntryOptions()
     {
-        return parent::initStreamEntryOptions()
-            ->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD)
-            ->disableAddons()
-            ->disableControlsMenu();
+        $wallStreamEntry = new WallStreamEntryOptions();
+        $wallStreamEntry->disableAddons();
+        $wallStreamEntry->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD);
+        $wallStreamEntry->enableNewsOption();
+        return $wallStreamEntry;
     }
+
+//    public function initStreamEntryOptions()
+//    {
+//        return parent::initStreamEntryOptions()
+//            ->viewContext(StreamEntryOptions::VIEW_CONTEXT_DASHBOARD)
+//            ->disableAddons()
+//            ->enableNewsOption();
+//    }
 
     public function querySpace()
     {

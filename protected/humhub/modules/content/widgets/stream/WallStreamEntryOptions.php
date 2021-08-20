@@ -347,4 +347,16 @@ class WallStreamEntryOptions extends StreamEntryOptions
     {
         return $this->disableAddonWidget(WallEntryLinks::class);
     }
+
+    private $isNews = false;
+
+    public function enableNewsOption()
+    {
+        $this->isNews = true;
+    }
+
+    public function getNewsOption(): bool
+    {
+        return $this->isNews;
+    }
 }
