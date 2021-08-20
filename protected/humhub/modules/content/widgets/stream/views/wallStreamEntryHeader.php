@@ -9,7 +9,7 @@ use humhub\modules\content\widgets\VisibilityIcon;
 use humhub\modules\content\widgets\WallEntryControls;
 use humhub\modules\space\models\Space;
 use humhub\modules\user\models\User;
-use humhub\modules\space\widgets\Image as SpaceImage;
+use humhub\modules\user\models\Profile;
 use humhub\modules\ui\icon\widgets\Icon;
 use humhub\modules\ui\view\components\View;
 use humhub\widgets\TimeAgo;
@@ -22,6 +22,8 @@ use humhub\widgets\TimeAgo;
 /* @var $renderOptions WallStreamEntryOptions */
 
 $container = $model->content->container;
+$profile = Profile::findOne(['user_id' => Yii::$app->user->getId()]);
+$city = $profile['city'] ?? 0;
 ?>
 
 <div class="stream-entry-icon-list">
@@ -63,6 +65,12 @@ $container = $model->content->container;
         <?php if ($renderOptions->isShowAuthorInformationInSubHeadLine($model)) : ?>
             <?= Html::containerLink($model->content->createdBy, ['class' => 'wall-entry-container-link']) ?>
         <?php endif ?>
+
+        <?php if($city == 1) : ?>
+            <?= Html::tag('div', '', ['class' => 'square-trapezoid franfurk-club']); ?>
+        <?php else : ?>
+            <?= Html::tag('div', '', ['class' => 'square-trapezoid other-clubs']); ?>
+        <?php endif; ?>
 
         <?php if ($renderOptions->isShowContainerInformationInSubTitle($model)) : ?>
             <?php if ($renderOptions->isShowAuthorInformationInSubHeadLine($model)) : ?>

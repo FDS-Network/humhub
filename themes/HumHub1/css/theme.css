@@ -3086,6 +3086,26 @@ div.nested-comments-root div.comment-container {
     color: #C2362F
 }
 
+.square-trapezoid {
+    display: inline-block;
+    width: 35px;
+    height: 11px;
+    margin-left: -10px;
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+
+}
+
+.franfurk-club {
+    color: #cd291f;
+    background: #cd291f;
+}
+
+.other-clubs {
+    color: #f6ac17;
+    background: #f6ac17
+}
+
 .wall-entry .wall-entry-header .stream-entry-icon-list {
     position: absolute;
     top: 0;
