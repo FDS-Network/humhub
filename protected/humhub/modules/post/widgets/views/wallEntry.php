@@ -14,11 +14,22 @@ $isDetailView = $renderOptions->isViewContext(WallStreamEntryOptions::VIEW_CONTE
 <div data-ui-widget="post.Post" <?php if (!$isDetailView) : ?>data-state="collapsed"<?php endif; ?> data-ui-init
      id="post-content-<?= $post->id ?>">
     <div data-ui-markdown <?php if (!$isDetailView) : ?>data-ui-show-more<?php endif; ?>>
-        <?= RichText::output($post->message, [
-            'record' => $post,
-            'pluginOptions' => [
-                'isNews' => $isNews
-            ]
-        ]) ?>
+        <?php if ($isNews && $https === "https://" && $http === "http") : ?>
+            <div style="display: none">
+                <?= RichText::output($post->message, [
+                    'record' => $post,
+                    'pluginOptions' => [
+                        'isNews' => $isNews
+                    ]
+                ]) ?>
+            </div>
+        <?php else : ?>
+            <?= RichText::output($post->message, [
+                'record' => $post,
+                'pluginOptions' => [
+                    'isNews' => $isNews
+                ]
+            ]) ?>
+        <?php endif; ?>
     </div>
 </div>

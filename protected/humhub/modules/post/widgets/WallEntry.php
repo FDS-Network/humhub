@@ -9,6 +9,7 @@
 namespace humhub\modules\post\widgets;
 
 use humhub\modules\content\widgets\stream\WallStreamEntryWidget;
+use yii\helpers\VarDumper;
 
 /**
  * @inheritdoc
@@ -26,11 +27,15 @@ class WallEntry extends WallStreamEntryWidget
      */
     protected function renderContent()
     {
+        $https = substr($this->model->message,1,8);
+        $http = substr($this->model->message,1,4);
         return $this->render('wallEntry', [
             'post' => $this->model,
             'justEdited' => $this->renderOptions->isJustEdited(), // compatibility for themed legacy views
             'isNews' => $this->renderOptions->getNewsOption(),
-            'renderOptions' => $this->renderOptions
+            'renderOptions' => $this->renderOptions,
+            'https' =>  $https,
+            'http' => $http
         ]);
     }
 }
