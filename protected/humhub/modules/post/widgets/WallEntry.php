@@ -28,7 +28,7 @@ class WallEntry extends WallStreamEntryWidget
     protected function renderContent()
     {
         $https = substr($this->model->message,1,8);
-        $http = substr($this->model->message,1,4);
+        $http = substr($this->model->message,1, 7);
         return $this->render('wallEntry', [
             'post' => $this->model,
             'justEdited' => $this->renderOptions->isJustEdited(), // compatibility for themed legacy views
